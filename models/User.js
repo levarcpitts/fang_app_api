@@ -44,6 +44,22 @@ const UserSchema = new mongoose.Schema({
         type:Boolean,
         defualt: false,
     },
+    desc: {
+        type:String,
+        max: 50
+    },
+    city:{
+        type: String,
+        max: 50
+    },
+    graduation_year: {
+        type: Number, 
+        max:4
+    },
+    position: {
+        type: Number,
+        enum: [1,2,3]
+    }
 },
  { timestamps:true }
 );
